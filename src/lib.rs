@@ -1,9 +1,26 @@
 pub mod actions {
-    pub trait SimpleAction {
+    pub trait Action {
         fn action(&self);
     }
+}
 
-    pub trait ClassicAction {
-        fn action(&self);
+pub mod objects {
+    pub struct Object {
+        name: String,
+        exists: bool
+    }
+
+    pub fn create(name: String) -> Object {
+        let object = Object {
+            name: name,
+            exists: true,
+        };
+
+        return object;
+    }
+
+    pub fn remove(object: &Object) {
+        object.name == "";
+        object.exists == false;
     }
 }
