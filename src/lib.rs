@@ -7,7 +7,7 @@ pub mod actions {
 pub mod objects {
     pub struct Object {
         name: String,
-        exists: bool
+        pub exists: bool
     }
 
     pub fn create(name: String) -> Object {
